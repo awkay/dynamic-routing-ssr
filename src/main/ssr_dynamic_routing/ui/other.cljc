@@ -1,14 +1,10 @@
 (ns ssr-dynamic-routing.ui.other
   (:require
     #?(:cljs [cljs.loader :as loader])
-    [fulcro.client.mutations :as m]
-    [fulcro.client.data-fetch :as df]
     #?(:cljs [fulcro.client.dom :as dom] :clj
-    [fulcro.client.dom-server :as dom])
-    [ssr-dynamic-routing.api.mutations :as api]
-    [fulcro.client.primitives :as prim :refer [defsc]]
-    [fulcro.client.routing :as r]
-    [fulcro.i18n :as i18n :refer [tr trf]]))
+        [fulcro.client.dom-server :as dom])
+        [fulcro.client.primitives :as prim :refer [defsc]]
+        [fulcro.client.routing :as r]))
 
 (defsc Other [this {:keys [x]}]
   {:query         [r/dynamic-route-key :x]

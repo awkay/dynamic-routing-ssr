@@ -10,11 +10,7 @@
     [ssr-dynamic-routing.ui.root :as root]
 
     [fulcro.client.dom-server :as dom]
-    [clojure.pprint :refer [pprint]]
 
-    ; MUST require these, or you won't get queries/mutations installed
-    [ssr-dynamic-routing.api.read]
-    [ssr-dynamic-routing.api.mutations]
     [fulcro.client.primitives :as prim]
     [fulcro.client.routing :as r]))
 
@@ -24,7 +20,6 @@
                     (r/install-route* :main root/Main)
                     (r/install-route* :other other/Other)
                     (r/route-to* match))]
-    (pprint  final-db)
     (prim/db->tree (prim/get-query root/Root final-db) final-db final-db)))
 
 (defn server-side-render [env {:keys [handler] :as match}]

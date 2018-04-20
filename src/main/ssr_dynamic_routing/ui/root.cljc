@@ -1,14 +1,10 @@
 (ns ssr-dynamic-routing.ui.root
   (:require
-    [fulcro.client.mutations :as m]
-    [fulcro.client.data-fetch :as df]
     #?(:cljs [cljs.loader :as loader])
     #?(:cljs [fulcro.client.dom :as dom] :clj
-    [fulcro.client.dom-server :as dom])
-    [ssr-dynamic-routing.api.mutations :as api]
-    [fulcro.client.primitives :as prim :refer [defsc]]
-    [fulcro.client.routing :as r]
-    [fulcro.i18n :as i18n :refer [tr trf]]))
+        [fulcro.client.dom-server :as dom])
+        [fulcro.client.primitives :as prim :refer [defsc]]
+        [fulcro.client.routing :as r]))
 
 (def routing-tree (r/routing-tree
                     (r/make-route :main [(r/router-instruction :top-router [:main :singleton])])

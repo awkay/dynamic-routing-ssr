@@ -5,7 +5,7 @@
 
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [thheller/shadow-cljs "2.2.29"]
-                 [fulcrologic/fulcro "2.5.0"]
+                 [fulcrologic/fulcro "2.5.2-SNAPSHOT"]
 
                  ; Only required if you use server
                  [http-kit "2.2.0"]
